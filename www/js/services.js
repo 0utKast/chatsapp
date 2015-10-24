@@ -1,35 +1,57 @@
-angular.module('starter.services', [])
+angular.module('whatsapp.services', [])
 
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var chats = [{
-    id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
-  }, {
-    id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
-  }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
-  }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'https://pbs.twimg.com/profile_images/598205061232103424/3j5HUXMY.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'https://pbs.twimg.com/profile_images/578237281384841216/R3ae1n61.png'
-  }];
+  var chats = [
+    {
+      _id: 0,
+      name: 'Jesús Conde',
+      picture: 'https://pbs.twimg.com/profile_images/1001601612/005_bigger.jpg',
+      lastMessage: {
+        text: 'Caminando entre Códigos',
+        timestamp: moment().subtract(1, 'horas')
+      }
+    },
+    {
+      _id: 1,
+      name: 'Hub Spot',
+      picture: 'https://pbs.twimg.com/profile_images/626105757004492800/CdxLMoHH_400x400.png',
+      lastMessage: {
+        text: 'Hola, soy yo',
+        timestamp: moment().subtract(2, 'horas')
+      }
+    },
+    {
+      _id: 2,
+      name: 'Lisa Collins',
+      picture: 'https://pbs.twimg.com/profile_images/587606033222082561/c53Lkbrz.jpg',
+      lastMessage: {
+        text: 'En medio del puente',
+        timestamp: moment().subtract(1, 'días')
+      }
+    },
+    {
+      _id: 3,
+      name: 'Ivo Spigel',
+      picture: 'https://pbs.twimg.com/profile_images/572380074209316864/mlzFGcN8.jpeg',
+      lastMessage: {
+        text: 'Lanzando mi Startup',
+        timestamp: moment().subtract(4, 'días')
+      }
+    },
+    {
+      _id: 4,
+      name: 'Loly Daskall',
+      picture: 'https://pbs.twimg.com/profile_images/127105431/Lolly2_400x400.jpg',
+      lastMessage: {
+        text: 'Enciende las luces.',
+        timestamp: moment().subtract(2, 'semanas')
+      }
+    }
+  ];
+
 
   return {
     all: function() {
@@ -40,7 +62,7 @@ angular.module('starter.services', [])
     },
     get: function(chatId) {
       for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
+        if (chats[i]._id === parseInt(chatId)) {
           return chats[i];
         }
       }
