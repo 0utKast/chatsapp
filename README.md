@@ -1,26 +1,26 @@
-### Step 1
+Ionic App Base
+=====================
 
-1. Install ionic `$ npm install -g ionic`
-2. Start ionic tabs template  `$ ionic start whatsapp tabs`
+A starting project for Ionic that optionally supports using custom SCSS.
 
-### Step 2 - Mock Whatsapp chats view, coding style and structure
+## Using this project
 
-1. Apply [John Papa](https://github.com/johnpapa/angular-styleguide) coding style 
-    - Seperate components to their own files:
-        * `config.js`
-        * `routes.js`
-        * `controllers/chats.controller.js`
-        * `controllers/chat-detail.controller.js`
-3. Mock Whatsapp tabs
-4. Mock Whatsapp chats view
-    * Add `timestamp` to lastMessage
-    * Add `filters/calendar.filter.js`
-    * Add moment.js - `$ bower install moment --save`
-5. Setup sass:
-    * `$ npm install`
-    * `$ ionic setup sass`
-6. Add `chats.scss`
-7. Change data scheme:
-    * `id` -> `_id`
-    * `face` -> `picture`
-    * `lastText` -> `lastMessage { text, timestamp }`
+We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
+
+For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+
+```bash
+$ npm install -g ionic
+```
+
+Then run:
+
+```bash
+$ ionic start myProject tabs
+```
+
+More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
+
+## Issues
+Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+
